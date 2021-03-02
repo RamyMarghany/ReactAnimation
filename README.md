@@ -1,4 +1,4 @@
-### React Animation
+# React Animation
 
 when we try to animate any element we can normally use the `animation` css property or a `keyframes` css.
 
@@ -6,13 +6,13 @@ but with react these two possibilities are not affective because some react elem
 
 and in this application we are using `react-transition-group`
 
-### This application build by this command
+## This application build by this command
 
 `yarn add react react-transition-group`
 
 ## React Transition Group Features
 
-# Transition from "react-transition-group"
+### Transition from "react-transition-group"
 
 it is a component wraps the element that we need to animate it
 and has some properties:
@@ -35,52 +35,16 @@ and the `Transition` component using a callback that return a state to decide th
 - `exiting`.
 - `exited`.
 
-EX:
-`
-<Transition
-in={this.state.showBlock}
-timeout={1000}
-mountOnEnter
-unmountOnExit>
-{
-(state) => (
-
-  <div
-     style={{
-       backgroundColor: "red",
-       width: 100,
-       height: 100,
-       margin: "auto",
-       transition: "opacity 1s ease-out",
-       opacity: state === "exiting" ? 0 : 1,
-      }}
-      />
-    )}
-
-  </Transition>
-`
-
-# CSSTransition from "react-transition-group/CSSTransition"
+### CSSTransition from "react-transition-group/CSSTransition"
 
 and this component acting as `Transition` but gives more features related cssClasses, this component has a property calls `classNames` which receive and object of classNames,
-EX:
-`<CSSTransition
-classNames={{
-      enter: "",
-      enterActive: "ModalOpen",
-      exit: "",
-      exitActive: "ModalClosed",
-    }}
 
-> `
-
-# TransitionGroup from "react-transition-group/TransitionGroup"
+### TransitionGroup from "react-transition-group/TransitionGroup"
 
 this component using to apply the animation on a list of element like `ul`, and it has property calls `component`
-so simply, replace the `ul` by the `TransitionGroup` and render it as ul by set a value of the component property by ul,
-EX: <TransitionGroup component="ul"/>
+so simply, replace the `ul` by the `TransitionGroup` and render it as ul by set a value of the component property by ul.
 
-# Relative animation library for react
+## Relative animation library for react
 
 - React Motion: https://github.com/chenglou/react-motion
 - React Move: https://github.com/react-tools/react-move
